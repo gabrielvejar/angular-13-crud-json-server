@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "productName": "Apple",
+      "category": "Fruits",
+      "date": "2024-09-26T03:00:00.000Z",
+      "freshness": "Brand New",
+      "price": 1990,
+      "description": "Fiji",
+      "id": 1
+    },
+    {
+      "productName": "Orange",
+      "category": "Fruits",
+      "date": "2024-09-27T03:00:00.000Z",
+      "freshness": "Brand New",
+      "price": 590,
+      "description": "Bigs",
+      "id": 2
+    },
+    {
+      "productName": "mango",
+      "category": "Fruits",
+      "date": "2024-09-27T03:00:00.000Z",
+      "freshness": "Brand New",
+      "price": 1231,
+      "description": "good",
+      "id": 3
+    },
+    {
+      "productName": "Watermelon",
+      "category": "Fruits",
+      "date": "2024-09-05T04:00:00.000Z",
+      "freshness": "Second Hand",
+      "price": 32423432,
+      "description": "From Paine, Chile",
+      "id": 4
+    },
+    {
+      "productName": "Banana",
+      "category": "Fruits",
+      "date": "2024-09-26T03:00:00.000Z",
+      "freshness": "Refurbished",
+      "price": 342,
+      "description": "Ecuador",
+      "id": 5
+    },
+    {
+      "productName": "Pear",
+      "category": "Fruits",
+      "date": "2024-09-20T03:00:00.000Z",
+      "freshness": "Second Hand",
+      "price": 3423,
+      "description": "Yellow",
+      "id": 6
+    },
+    {
+      "productName": "asdasdsa",
+      "category": "Fruits",
+      "date": "2024-09-05T04:00:00.000Z",
+      "freshness": "Brand New",
+      "price": 234324,
+      "description": "dsfdsfdsf",
+      "id": 7
+    },
+    {
+      "productName": "s24",
+      "category": "Electronics",
+      "date": "2024-09-27T03:00:00.000Z",
+      "freshness": "Second Hand",
+      "price": 23432323,
+      "description": "ddsfds",
+      "id": 8
+    }
+  ]
+}

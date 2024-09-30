@@ -1,0 +1,18 @@
+<div *ngIf="!!data.title" mat-dialog-title class="dialog-header">
+  <h1>{{ data.title }}</h1>
+  <span class="spacer"></span>
+  <button
+    *ngIf="data.closeButton"
+    mat-icon-button
+    mat-dialog-close
+    class="close-button"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<div mat-dialog-content>
+  <p>{{ data.message }}</p>
+</div>
+<div mat-dialog-actions [align]="'center'">
+  <button mat-raised-button mat-dialog-close type="button">Ok</button>
+</div>
