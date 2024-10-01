@@ -2,6 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Product } from './product';
 import { ApiService } from '../services/api.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../components/dialog/dialog.component';
 
 @Component({
   selector: 'app-product',
@@ -20,7 +22,7 @@ export class ProductComponent implements OnInit, OnDestroy {
   ];
   dataSource = new MatTableDataSource<Product>([]);
 
-  constructor(private api: ApiService) {}
+  constructor(private api: ApiService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.subscribeProducts();
@@ -51,8 +53,20 @@ export class ProductComponent implements OnInit, OnDestroy {
 
   handleClickEdit(id: number) {
     console.log('edit', id);
+    const product = this.dataSource.data.find((product) => product.id === id);
+    console.log(product);
+    this.dialog.open(DialogComponent, {
+      panelClass: 'dialog-container',
+      width: '30%',
+      data: {
+        isEdit: true,
+        product: this.dataSource.data.find((product) => product.id === id),
+      },
+    });
   }
+
   handleClickDelete(id: number) {
+    // TODO add confirm dialog
     this.api.deleteProduct(id).subscribe({
       next: () => {
         // this.api.getProducts();

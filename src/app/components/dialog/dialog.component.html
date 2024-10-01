@@ -1,11 +1,11 @@
 <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
 <div mat-dialog-title class="dialog-header">
-  <h1>Add Product</h1>
+  <h1>{{ modalTitle }}</h1>
   <button mat-icon-button mat-dialog-close class="close-button">
     <mat-icon>close</mat-icon>
   </button>
 </div>
-<form [formGroup]="productForm" (ngSubmit)="addProduct()">
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
   <div mat-dialog-content>
     <mat-form-field appearance="outline">
       <mat-label>Product name</mat-label>
@@ -65,6 +65,8 @@
     <button mat-raised-button color="warn" mat-dialog-close type="button">
       Close
     </button>
-    <button mat-raised-button color="primary" type="submit">Save</button>
+    <button mat-raised-button color="primary" type="submit">
+      {{ actionBtn }}
+    </button>
   </div>
 </form>
