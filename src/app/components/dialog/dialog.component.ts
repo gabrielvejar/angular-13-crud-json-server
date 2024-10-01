@@ -11,6 +11,7 @@ import { AlertComponent } from '../alert/alert.component';
   styleUrls: ['./dialog.component.scss'],
 })
 export class DialogComponent implements OnInit {
+  isLoading = false;
   categoryList = ['Fruits', 'Vegetables', 'Electronics'];
   freshnessList = ['Brand New', 'Second Hand', 'Refurbished'];
   productInitialValues: Product = {
@@ -44,6 +45,7 @@ export class DialogComponent implements OnInit {
 
   addProduct() {
     console.log(this.productForm.value);
+    this.isLoading = true;
 
     if (this.productForm.valid) {
       this.api.postProduct(this.productForm.value).subscribe({
@@ -70,6 +72,9 @@ export class DialogComponent implements OnInit {
               closeButton: false,
             },
           });
+        },
+        complete: () => {
+          this.isLoading = false;
         },
       });
     }

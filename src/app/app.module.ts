@@ -18,9 +18,17 @@ import { MatRadioModule } from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AlertComponent } from './components/alert/alert.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { ProductComponent } from './product/product.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
-  declarations: [AppComponent, DialogComponent, AlertComponent],
+  declarations: [
+    AppComponent,
+    DialogComponent,
+    AlertComponent,
+    ProductComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -37,6 +45,8 @@ import { AlertComponent } from './components/alert/alert.component';
     MatNativeDateModule,
     MatRadioModule,
     ReactiveFormsModule,
+    MatProgressBarModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

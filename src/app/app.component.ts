@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from './components/dialog/dialog.component';
 
@@ -12,6 +12,7 @@ export class AppComponent {
 
   openDialog() {
     this.dialog.open(DialogComponent, {
+      panelClass: 'dialog-container',
       width: '30%',
     });
   }
